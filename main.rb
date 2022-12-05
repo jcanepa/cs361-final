@@ -26,7 +26,7 @@ def main()
     Point.new(-122, 45.5),
   ]
 
-  # new tracks are instantiated with a collection of points, and a name
+  # new tracks are instantiated with groups of collections of points, and a name
   t = Track.new([ts1, ts2], "track 1")
   t2 = Track.new([ts3], "track 2")
 

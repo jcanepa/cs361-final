@@ -1,11 +1,11 @@
 class Waypoint
 
-  attr_reader :lat, :lon, :ele, :name, :type
+  attr_reader :lat, :lon, :elevation, :name, :type
 
-  def initialize(lon, lat, ele=nil, name=nil, type=nil)
+  def initialize(lon, lat, elevation=nil, name=nil, type=nil)
     @lat = lat
     @lon = lon
-    @ele = ele
+    @elevation = elevation
     @name = name
     @type = type
   end
@@ -15,8 +15,8 @@ class Waypoint
     # if name is not nil or type is not nil
     j += '"geometry": {"type": "Point","coordinates": '
     j += "[#{@lon},#{@lat}"
-    if ele != nil
-      j += ",#{@ele}"
+    if elevation != nil
+      j += ",#{@elevation}"
     end
     j += ']},'
     if name != nil or type != nil
