@@ -14,7 +14,7 @@ engineering. You should fix it up and eliminate that technical debt.
 You should be able to run it already:
 
 ```
-ruby gis.rb
+ruby main.rb
 ```
 
 This will give GeoJSON output for some features that have been added in
@@ -36,7 +36,7 @@ If you pipe it into the program `json_print.rb`, it should pretty
 it up for you:
 
 ```
-ruby gis.rb | ruby json_print.rb
+ruby main.rb | ruby json_print.rb
 ```
 
 **If the above command fails with an error in `parse`, it means the JSON
