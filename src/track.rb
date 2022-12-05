@@ -1,3 +1,5 @@
+require_relative 'track-segment'
+
 class Track
   def initialize(segments, name=nil)
     @name = name

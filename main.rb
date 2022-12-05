@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require_relative 'src/point'
-require_relative 'src/track-segment'
 require_relative 'src/track'
 require_relative 'src/waypoint'
 require_relative 'src/world'
