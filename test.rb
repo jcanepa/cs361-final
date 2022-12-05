@@ -1,4 +1,4 @@
-require_relative 'gis.rb'
+require_relative 'main.rb'
 require 'json'
 require 'test/unit'
 
