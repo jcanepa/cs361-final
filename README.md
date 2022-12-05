@@ -21,15 +21,7 @@ This will give GeoJSON output for some features that have been added in
 the code:
 
 ```
-{"type":"FeatureCollection","features":[{"type": "Feature","properties":
-{"title": "home","icon": "flag"},"geometry":{"type":"Point","coordinates
-":[-121.5,45.5,30]}},{"type": "Feature","properties": {"title": "store",
-"icon": "dot"},"geometry":{"type":"Point","coordinates":[-121.5,45.6]}},
-{"type": "Feature","properties": {"title": "track 1"},"geometry": {"type
-": "MultiLineString","coordinates": [[[45,-122],[46,-122],[46,-121]],[[4
-5,-121],[46,-121]]]}},{"type": "Feature","properties": {"title": "track
-2"},"geometry": {"type": "MultiLineString","coordinates": [[[45.5,-121],
-[45.5,-122]]]}}]}
+{"type": "FeatureCollection","features": [{"type": "Feature","geometry": {"type": "Point","coordinates": [-121.5,45.5,30]},"properties": {"title": "home","icon": "flag"}},{"type": "Feature","geometry": {"type": "Point","coordinates": [-121.5,45.6]},"properties": {"title": "store","icon": "dot"}},{"type": "Feature", "properties": {"title": "track 1"},"geometry": {"type": "MultiLineString","coordinates": [[[-122,45],[-122,46],[-121,46]],[[-121,45],[-121,46]]]}},{"type": "Feature", "properties": {"title": "track 2"},"geometry": {"type": "MultiLineString","coordinates": [[[-121,45.5],[-122,45.5]]]}}]}
 ```
 
 If you pipe it into the program `json_print.rb`, it should pretty
