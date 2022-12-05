@@ -1,10 +1,10 @@
 class Point
 
-  attr_reader :lat, :lon, :ele
+  attr_reader :lat, :lon, :elevation
 
-  def initialize(lon, lat, ele=nil)
+  def initialize(lon, lat, elevation=nil)
     @lon = lon
     @lat = lat
-    @ele = ele
+    @elevation = elevation
   end
 end

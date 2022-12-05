@@ -37,8 +37,8 @@ class Track
         # Add the coordinate
         tsj += '['
         tsj += "#{c.lon},#{c.lat}"
-        if c.ele != nil
-          tsj += ",#{c.ele}"
+        if c.elevation != nil
+          tsj += ",#{c.elevation}"
         end
         tsj += ']'
       end
