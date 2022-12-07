@@ -9,16 +9,12 @@ require_relative 'src/classes/world'
 def main()
   # waypoints with optional fields
   w = Waypoint.new(
-    -121.5,
-    45.5,
-    30,
+    Point.new(-121.5, 45.5, 30),
     "home",
     "flag")
 
   w2 = Waypoint.new(
-    -121.5,
-    45.6,
-    nil,
+    Point.new(-121.5, 45.6, nil),
     "store",
     "dot")
 
