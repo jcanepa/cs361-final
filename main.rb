@@ -44,7 +44,7 @@ def main()
   world = World.new("My Data", [w, w2, t, t2])
 
   # echo a json representation of the world
-  puts world.to_geojson()
+  puts world.to_json()
 end
 
 if File.identical?(__FILE__, $0)

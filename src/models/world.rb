@@ -9,7 +9,7 @@ class World
     @features.append(t)
   end
 
-  def to_geojson(indent=0)
+  def to_json(indent=0)
     # Write stuff
     s = '{"type": "FeatureCollection","features": ['
 
