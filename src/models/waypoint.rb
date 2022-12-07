@@ -14,7 +14,7 @@ class Waypoint
     @type = type
   end
 
-  def get_waypoint_json(indent=0)
+  def to_json(indent=0)
     j = '{"type": "Feature",'
     # if name is not nil or type is not nil
     j += '"geometry": {"type": "Point","coordinates": '

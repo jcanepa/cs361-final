@@ -17,11 +17,7 @@ class World
       if i != 0
         s +=","
       end
-      if f.class == Track
-          s += f.get_track_json
-      elsif f.class == Waypoint
-          s += f.get_waypoint_json
-      end
+      s += f.to_json
     end
     s + "]}"
   end
