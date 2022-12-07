@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 
-require_relative 'src/models/point'
-require_relative 'src/models/track-segment'
-require_relative 'src/models/track'
-require_relative 'src/models/waypoint'
-require_relative 'src/models/world'
+require_relative 'src/classes/point'
+require_relative 'src/classes/track-segment'
+require_relative 'src/classes/track'
+require_relative 'src/classes/waypoint'
+require_relative 'src/classes/world'
 
 def main()
   # waypoints with optional fields
