@@ -19,13 +19,7 @@ class TrackSegment
       if tsj != ''
         tsj += ','
       end
-      # Add the coordinate
-      tsj += '['
-      tsj += "#{c.lon},#{c.lat}"
-      if c.elevation != nil
-        tsj += ",#{c.elevation}"
-      end
-      tsj += ']'
+      tsj += c.to_json
     end
     j+=tsj
     j+=']'

@@ -9,13 +9,12 @@ class Point
   end
 
   def to_json
-    # Add the coordinate
-    j = '['
-    j += "#{@lon},#{@lat}"
+    tsj = '['
+    tsj += "#{@lon},#{@lat}"
     if @elevation != nil
-      j += ",#{@elevation}"
+      tsj += ",#{@elevation}"
     end
-    j += ']'
-    return j
+    tsj += ']'
+    return tsj
   end
 end
