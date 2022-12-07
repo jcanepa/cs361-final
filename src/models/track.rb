@@ -1,21 +1,14 @@
-require_relative 'track-segment'
-
 # This is a list of Track Segments. It has an optional name.
 
 class Track
-
+  attr_reader :segments, :name
   def initialize(segments, name=nil)
+    @segments = segments
     @name = name
-    segment_objects = []
-    segments.each do |s|
-      segment_objects.append(TrackSegment.new(s))
-    end
-    # set segments to segment_objects
-    @segments = segment_objects
   end
 
   def to_json()
-    j = '{'
+    j = "{"
     j += '"type": "Feature", '
     if @name != nil
       j+= '"properties": {'

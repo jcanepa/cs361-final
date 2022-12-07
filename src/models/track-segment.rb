@@ -12,9 +12,10 @@ class TrackSegment
 
   def to_json
     j = '['
-    # Loop through all the coordinates in the segment
+    # Loop through each coordinate
     tsj = ''
     @coordinates.each do |c|
+      # comma separate if not first object in sequence
       if tsj != ''
         tsj += ','
       end

@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative 'src/models/point'
+require_relative 'src/models/track-segment'
 require_relative 'src/models/track'
 require_relative 'src/models/waypoint'
 require_relative 'src/models/world'
@@ -37,8 +38,12 @@ def main()
   ]
 
   # new tracks are instantiated with groups of collections of points, and a name
-  t = Track.new([ts1, ts2], "track 1")
-  t2 = Track.new([ts3], "track 2")
+  t = Track.new(
+    [TrackSegment.new(ts1), TrackSegment.new(ts2)],
+    "track 1")
+  t2 = Track.new(
+    [TrackSegment.new(ts3)],
+    "track 2")
 
   # create world with name and a collection of (waypoints and tracks)
   world = World.new("My Data", [w, w2, t, t2])
