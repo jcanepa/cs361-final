@@ -1,6 +1,9 @@
 require_relative 'track-segment'
 
+# This is a list of Track Segments. It has an optional name.
+
 class Track
+
   def initialize(segments, name=nil)
     @name = name
     segment_objects = []

@@ -1,3 +1,7 @@
+# Waypoint is a point represented by a latitude, longitude, and optional elevation.
+# A waypoint also has an optional name and icon.
+# (e.g. a name might be "ACME Dining" and the icon might be "restaurant".)
+
 class Waypoint
 
   attr_reader :lat, :lon, :elevation, :name, :type

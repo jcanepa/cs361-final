@@ -1,15 +1,25 @@
 #!/usr/bin/env ruby
 
-require_relative 'src/point'
-require_relative 'src/track'
-require_relative 'src/waypoint'
-require_relative 'src/world'
-
+require_relative 'src/models/point'
+require_relative 'src/models/track'
+require_relative 'src/models/waypoint'
+require_relative 'src/models/world'
 
 def main()
-  # two types of waypoints?
-  w = Waypoint.new(-121.5, 45.5, 30, "home", "flag")
-  w2 = Waypoint.new(-121.5, 45.6, nil, "store", "dot")
+  # waypoints with optional fields
+  w = Waypoint.new(
+    -121.5,
+    45.5,
+    30,
+    "home",
+    "flag")
+
+  w2 = Waypoint.new(
+    -121.5,
+    45.6,
+    nil,
+    "store",
+    "dot")
 
   # three collections of points
   ts1 = [
