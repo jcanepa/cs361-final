@@ -25,29 +25,15 @@ class Track
     j += '"geometry": {'
     j += '"type": "MultiLineString",'
     j +='"coordinates": ['
+
     # Loop through all the segment objects
     @segments.each_with_index do |s, index|
       if index > 0
         j += ","
       end
-      j += '['
-      # Loop through all the coordinates in the segment
-      tsj = ''
-      s.coordinates.each do |c|
-        if tsj != ''
-          tsj += ','
-        end
-        # Add the coordinate
-        tsj += '['
-        tsj += "#{c.lon},#{c.lat}"
-        if c.elevation != nil
-          tsj += ",#{c.elevation}"
-        end
-        tsj += ']'
-      end
-      j+=tsj
-      j+=']'
+      j += s.to_json()
     end
+
     j + ']}}'
   end
 end
